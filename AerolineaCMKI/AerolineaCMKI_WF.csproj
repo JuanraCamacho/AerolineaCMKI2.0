@@ -46,14 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HomeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeAdmin.Designer.cs">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginCliente.Designer.cs">
+      <DependentUpon>LoginCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HomeAdmin.resx">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginCliente.resx">
+      <DependentUpon>LoginCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +83,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -74,7 +96,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AerolineaCMKI_Global\AerolineaCMKI_Global.csproj">
@@ -85,6 +109,75 @@
       <Project>{c5773619-bad3-459f-bb43-9132350cb0a9}</Project>
       <Name>AerolineaCMKI_Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userPRO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lockPRO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closePRO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avion100.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avion100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avion64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitacora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitacora16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitacora161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitacora162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitacora64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avionFly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avionFly1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
