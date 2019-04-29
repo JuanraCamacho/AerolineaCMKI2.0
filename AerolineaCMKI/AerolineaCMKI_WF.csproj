@@ -66,6 +66,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_Pasajeros.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Pasajeros.Designer.cs">
+      <DependentUpon>UC_Pasajeros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Reservaciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Reservaciones.Designer.cs">
+      <DependentUpon>UC_Reservaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_VuelosAvion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_VuelosAvion.Designer.cs">
+      <DependentUpon>UC_VuelosAvion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_VuelosHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_VuelosHome.Designer.cs">
+      <DependentUpon>UC_VuelosHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_VuelosVuelo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_VuelosVuelo.Designer.cs">
+      <DependentUpon>UC_VuelosVuelo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="HomeAdmin.resx">
       <DependentUpon>HomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +115,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC_Pasajeros.resx">
+      <DependentUpon>UC_Pasajeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Reservaciones.resx">
+      <DependentUpon>UC_Reservaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_VuelosAvion.resx">
+      <DependentUpon>UC_VuelosAvion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_VuelosHome.resx">
+      <DependentUpon>UC_VuelosHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_VuelosVuelo.resx">
+      <DependentUpon>UC_VuelosVuelo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -178,6 +223,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\avionFly1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

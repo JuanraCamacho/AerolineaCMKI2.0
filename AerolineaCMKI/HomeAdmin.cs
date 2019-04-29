@@ -28,11 +28,37 @@ namespace AerolineaCMKI
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        private void CMKI_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        private void pbLogoCliente_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
         #endregion
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            uC_Reservaciones1.BringToFront();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            uC_Pasajeros1.BringToFront();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            uC_VuelosHome1.BringToFront();
+        }        
+        //uC_Reservaciones
     }
 }
