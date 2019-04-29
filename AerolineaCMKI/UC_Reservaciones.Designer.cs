@@ -28,77 +28,95 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pbAdd = new System.Windows.Forms.PictureBox();
+            this.pbEdit = new System.Windows.Forms.PictureBox();
+            this.pbDelete = new System.Windows.Forms.PictureBox();
+            this.CMKI = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pcDelete = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pbAdd
+            // 
+            this.pbAdd.Image = global::AerolineaCMKI.Properties.Resources.add;
+            this.pbAdd.Location = new System.Drawing.Point(604, 26);
+            this.pbAdd.Name = "pbAdd";
+            this.pbAdd.Size = new System.Drawing.Size(63, 50);
+            this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAdd.TabIndex = 6;
+            this.pbAdd.TabStop = false;
+            this.pbAdd.Click += new System.EventHandler(this.pbAdd_Click);
+            // 
+            // pbEdit
+            // 
+            this.pbEdit.Image = global::AerolineaCMKI.Properties.Resources.edit;
+            this.pbEdit.Location = new System.Drawing.Point(699, 26);
+            this.pbEdit.Name = "pbEdit";
+            this.pbEdit.Size = new System.Drawing.Size(67, 50);
+            this.pbEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbEdit.TabIndex = 5;
+            this.pbEdit.TabStop = false;
+            // 
+            // pbDelete
+            // 
+            this.pbDelete.Image = global::AerolineaCMKI.Properties.Resources.delete;
+            this.pbDelete.Location = new System.Drawing.Point(802, 26);
+            this.pbDelete.Name = "pbDelete";
+            this.pbDelete.Size = new System.Drawing.Size(52, 50);
+            this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbDelete.TabIndex = 4;
+            this.pbDelete.TabStop = false;
+            // 
+            // CMKI
+            // 
+            this.CMKI.AutoSize = true;
+            this.CMKI.BackColor = System.Drawing.Color.Transparent;
+            this.CMKI.Font = new System.Drawing.Font("Bahnschrift", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMKI.ForeColor = System.Drawing.Color.Black;
+            this.CMKI.Location = new System.Drawing.Point(69, 242);
+            this.CMKI.Name = "CMKI";
+            this.CMKI.Size = new System.Drawing.Size(130, 46);
+            this.CMKI.TabIndex = 10;
+            this.CMKI.Text = "Fecha:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(328, 267);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(118, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "RESERVACIONES";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::AerolineaCMKI.Properties.Resources.add;
-            this.pictureBox2.Location = new System.Drawing.Point(604, 26);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(63, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AerolineaCMKI.Properties.Resources.edit;
-            this.pictureBox1.Location = new System.Drawing.Point(699, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pcDelete
-            // 
-            this.pcDelete.Image = global::AerolineaCMKI.Properties.Resources.delete;
-            this.pcDelete.Location = new System.Drawing.Point(802, 26);
-            this.pcDelete.Name = "pcDelete";
-            this.pcDelete.Size = new System.Drawing.Size(52, 50);
-            this.pcDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcDelete.TabIndex = 4;
-            this.pcDelete.TabStop = false;
+            this.label1.Size = new System.Drawing.Size(364, 46);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Elige Tu Reservación";
             // 
             // UC_Reservaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pcDelete);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.CMKI);
+            this.Controls.Add(this.pbAdd);
+            this.Controls.Add(this.pbEdit);
+            this.Controls.Add(this.pbDelete);
             this.Name = "UC_Reservaciones";
             this.Size = new System.Drawing.Size(886, 541);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.PictureBox pbAdd;
+        private System.Windows.Forms.PictureBox pbEdit;
+        private System.Windows.Forms.PictureBox pbDelete;
+        private System.Windows.Forms.Label CMKI;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pcDelete;
     }
 }
