@@ -155,10 +155,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AerolineaCMKI_Global\AerolineaCMKI_Global.csproj">
-      <Project>{ee53f420-62f5-4fff-90c2-aa660b11413c}</Project>
-      <Name>AerolineaCMKI_Global</Name>
-    </ProjectReference>
     <ProjectReference Include="..\AerolineaCMKI_Negocio\AerolineaCMKI_Negocio.csproj">
       <Project>{c5773619-bad3-459f-bb43-9132350cb0a9}</Project>
       <Name>AerolineaCMKI_Negocio</Name>

@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AerolineaCMKI_WF", "AerolineaCMKI\AerolineaCMKI_WF.csproj", "{1C732E1D-EF80-43E7-8EAF-D9ABBA6A8EAD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AerolineaCMKI_Datos", "AerolineaCMKI_Datos\AerolineaCMKI_Datos.csproj", "{A3DCA33F-E15D-4BF1-AF61-BCF2BB5753DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AerolineaCMKI_Negocio", "AerolineaCMKI_Negocio\AerolineaCMKI_Negocio.csproj", "{C5773619-BAD3-459F-BB43-9132350CB0A9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AerolineaCMKI_Global", "AerolineaCMKI_Global\AerolineaCMKI_Global.csproj", "{EE53F420-62F5-4FFF-90C2-AA660B11413C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,12 +27,11 @@ Global
 		{C5773619-BAD3-459F-BB43-9132350CB0A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5773619-BAD3-459F-BB43-9132350CB0A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5773619-BAD3-459F-BB43-9132350CB0A9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE53F420-62F5-4FFF-90C2-AA660B11413C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE53F420-62F5-4FFF-90C2-AA660B11413C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE53F420-62F5-4FFF-90C2-AA660B11413C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE53F420-62F5-4FFF-90C2-AA660B11413C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72A37AAD-582A-4321-8E3B-93151B1B0B93}
 	EndGlobalSection
 EndGlobal

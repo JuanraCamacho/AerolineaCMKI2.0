@@ -40,17 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CN_Reservaciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AerolineaCMKI_Datos\AerolineaCMKI_Datos.csproj">
       <Project>{a3dca33f-e15d-4bf1-af61-bcf2bb5753dc}</Project>
       <Name>AerolineaCMKI_Datos</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AerolineaCMKI_Global\AerolineaCMKI_Global.csproj">
-      <Project>{ee53f420-62f5-4fff-90c2-aa660b11413c}</Project>
-      <Name>AerolineaCMKI_Global</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
