@@ -58,7 +58,12 @@ namespace AerolineaCMKI
         private void button3_Click(object sender, EventArgs e)
         {
             uC_VuelosHome1.BringToFront();
-        }        
+        }
+
+        private void uC_Pasajeros1_Load(object sender, EventArgs e)
+        {
+
+        }
         //uC_Reservaciones
     }
 }

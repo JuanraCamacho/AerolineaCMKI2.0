@@ -19,5 +19,9 @@ namespace AerolineaCMKI_Negocio
             tabla = objetoCN.Mostrar();
             return tabla;
         }
+        public void InsertarGenerarFicha(String nombre, String apellidos, String fechaReservacion, String tipoReservacion, String tipoEstado, String monto, String MetodoPago, String numeroAsiento, String fila)
+        {
+            objetoCN.InsertarPrueba(nombre,  apellidos,  fechaReservacion,  tipoReservacion,  tipoEstado, Convert.ToDouble ( monto),  MetodoPago,  numeroAsiento, Convert.ToChar (fila));
+        }
     }
 }

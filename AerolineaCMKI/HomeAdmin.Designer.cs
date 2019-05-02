@@ -33,8 +33,8 @@
             this.CMKI = new System.Windows.Forms.Label();
             this.pbLogoCliente = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnVuelos = new System.Windows.Forms.Button();
+            this.btnPasajeros = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -58,7 +58,7 @@
             this.pnlTop.Controls.Add(this.pbLogoCliente);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlTop.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(851, 59);
             this.pnlTop.TabIndex = 0;
@@ -69,7 +69,7 @@
             this.pictureBox1.Image = global::AerolineaCMKI.Properties.Resources.close;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(827, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(17, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -96,7 +96,7 @@
             this.pbLogoCliente.Image = global::AerolineaCMKI.Properties.Resources.avion64;
             this.pbLogoCliente.InitialImage = null;
             this.pbLogoCliente.Location = new System.Drawing.Point(8, 8);
-            this.pbLogoCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbLogoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.pbLogoCliente.Name = "pbLogoCliente";
             this.pbLogoCliente.Size = new System.Drawing.Size(44, 40);
             this.pbLogoCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -107,63 +107,60 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(108)))));
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnVuelos);
+            this.panel1.Controls.Add(this.btnPasajeros);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 59);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(187, 440);
             this.panel1.TabIndex = 1;
             // 
-            // button3
+            // btnVuelos
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(98)))), ((int)(((byte)(151)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::AerolineaCMKI.Properties.Resources.avionFly1;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 269);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(187, 65);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "                             Vuelos";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnVuelos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(98)))), ((int)(((byte)(151)))));
+            this.btnVuelos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVuelos.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVuelos.Image = global::AerolineaCMKI.Properties.Resources.avionFly1;
+            this.btnVuelos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVuelos.Location = new System.Drawing.Point(1, 210);
+            this.btnVuelos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVuelos.Name = "btnVuelos";
+            this.btnVuelos.Size = new System.Drawing.Size(187, 65);
+            this.btnVuelos.TabIndex = 3;
+            this.btnVuelos.Text = "                             Vuelos";
+            this.btnVuelos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVuelos.UseVisualStyleBackColor = false;
+            this.btnVuelos.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnPasajeros
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(98)))), ((int)(((byte)(151)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::AerolineaCMKI.Properties.Resources.userS;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 204);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 65);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "       Pasajeros";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnPasajeros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(98)))), ((int)(((byte)(151)))));
+            this.btnPasajeros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPasajeros.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPasajeros.Image = global::AerolineaCMKI.Properties.Resources.userS;
+            this.btnPasajeros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPasajeros.Location = new System.Drawing.Point(1, 141);
+            this.btnPasajeros.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPasajeros.Name = "btnPasajeros";
+            this.btnPasajeros.Size = new System.Drawing.Size(187, 65);
+            this.btnPasajeros.TabIndex = 2;
+            this.btnPasajeros.Text = "       Pasajeros";
+            this.btnPasajeros.UseVisualStyleBackColor = false;
+            this.btnPasajeros.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(98)))), ((int)(((byte)(151)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::AerolineaCMKI.Properties.Resources.bitacora64;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 139);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(0, 279);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(187, 65);
             this.button1.TabIndex = 0;
@@ -191,7 +188,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox2.Image = global::AerolineaCMKI.Properties.Resources.admin1;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(187, 110);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,12 +198,12 @@
             // pnlGeneral
             // 
             this.pnlGeneral.BackColor = System.Drawing.Color.White;
-            this.pnlGeneral.Controls.Add(this.uC_Reservaciones1);
-            this.pnlGeneral.Controls.Add(this.uC_VuelosHome1);
             this.pnlGeneral.Controls.Add(this.uC_Pasajeros1);
+            this.pnlGeneral.Controls.Add(this.uC_VuelosHome1);
+            this.pnlGeneral.Controls.Add(this.uC_Reservaciones1);
             this.pnlGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGeneral.Location = new System.Drawing.Point(187, 59);
-            this.pnlGeneral.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlGeneral.Margin = new System.Windows.Forms.Padding(2);
             this.pnlGeneral.Name = "pnlGeneral";
             this.pnlGeneral.Size = new System.Drawing.Size(664, 440);
             this.pnlGeneral.TabIndex = 2;
@@ -227,7 +224,7 @@
             this.uC_VuelosHome1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uC_VuelosHome1.Name = "uC_VuelosHome1";
             this.uC_VuelosHome1.Size = new System.Drawing.Size(664, 440);
-            this.uC_VuelosHome1.TabIndex = 3;
+            this.uC_VuelosHome1.TabIndex = 5;
             // 
             // uC_Pasajeros1
             // 
@@ -236,7 +233,8 @@
             this.uC_Pasajeros1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uC_Pasajeros1.Name = "uC_Pasajeros1";
             this.uC_Pasajeros1.Size = new System.Drawing.Size(664, 440);
-            this.uC_Pasajeros1.TabIndex = 1;
+            this.uC_Pasajeros1.TabIndex = 6;
+            this.uC_Pasajeros1.Load += new System.EventHandler(this.uC_Pasajeros1_Load);
             // 
             // HomeAdmin
             // 
@@ -247,7 +245,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomeAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeAdmin";
@@ -272,13 +270,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnVuelos;
+        private System.Windows.Forms.Button btnPasajeros;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlGeneral;
-        private UC_Pasajeros uC_Pasajeros1;
         private UC_VuelosHome uC_Vuelos1;
         private UC_Reservaciones uC_Reservaciones1;
         private UC_VuelosHome uC_VuelosHome1;
+        private UC_Pasajeros uC_Pasajeros1;
     }
 }

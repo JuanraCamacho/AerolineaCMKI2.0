@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPasajeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPasajeros.Designer.cs">
+      <DependentUpon>AddPasajeros.cs</DependentUpon>
+    </Compile>
     <Compile Include="addReservacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     <Compile Include="UC_VuelosVuelo.Designer.cs">
       <DependentUpon>UC_VuelosVuelo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddPasajeros.resx">
+      <DependentUpon>AddPasajeros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addReservacion.resx">
       <DependentUpon>addReservacion.cs</DependentUpon>
     </EmbeddedResource>

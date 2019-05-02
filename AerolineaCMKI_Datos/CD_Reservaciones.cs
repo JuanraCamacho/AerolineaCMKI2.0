@@ -28,5 +28,24 @@ namespace AerolineaCMKI_Datos
             conexion.CerrarConexion();
             return tabla;
         }
+
+        public void InsertarPrueba(String nombre, String apellidos, String fechaReservacion, String tipoReservacion, String tipoEstado, double monto, String MetodoPago, String numeroAsiento, char fila)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "pruebaInsertarNuevoPasajero";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@nombre", nombre);
+            comando.Parameters.AddWithValue("@apellidos", apellidos);
+            comando.Parameters.AddWithValue("@fechaReservacion", fechaReservacion);
+            comando.Parameters.AddWithValue("@tipoReservaciones", tipoReservacion);
+            comando.Parameters.AddWithValue("@tipoEstado", tipoEstado);
+            comando.Parameters.AddWithValue("@monto", monto);
+            comando.Parameters.AddWithValue("@metodoPago", MetodoPago);
+            comando.Parameters.AddWithValue("@numeroAsiento", numeroAsiento);
+            comando.Parameters.AddWithValue("@fila", fila);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+
+        }
     }
 }
