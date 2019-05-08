@@ -39,9 +39,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlGeneral = new System.Windows.Forms.Panel();
-            this.uC_Reservaciones1 = new AerolineaCMKI.UC_Reservaciones();
-            this.uC_VuelosHome1 = new AerolineaCMKI.UC_VuelosHome();
             this.uC_Pasajeros1 = new AerolineaCMKI.UC_Pasajeros();
+            this.uC_VuelosHome1 = new AerolineaCMKI.UC_VuelosHome();
+            this.uC_Reservaciones1 = new AerolineaCMKI.UC_Reservaciones();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoCliente)).BeginInit();
@@ -62,6 +62,7 @@
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(851, 59);
             this.pnlTop.TabIndex = 0;
+            this.pnlTop.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTop_Paint);
             this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
             // 
             // pictureBox1
@@ -208,14 +209,15 @@
             this.pnlGeneral.Size = new System.Drawing.Size(664, 440);
             this.pnlGeneral.TabIndex = 2;
             // 
-            // uC_Reservaciones1
+            // uC_Pasajeros1
             // 
-            this.uC_Reservaciones1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Reservaciones1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Reservaciones1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_Reservaciones1.Name = "uC_Reservaciones1";
-            this.uC_Reservaciones1.Size = new System.Drawing.Size(664, 440);
-            this.uC_Reservaciones1.TabIndex = 4;
+            this.uC_Pasajeros1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Pasajeros1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Pasajeros1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_Pasajeros1.Name = "uC_Pasajeros1";
+            this.uC_Pasajeros1.Size = new System.Drawing.Size(664, 440);
+            this.uC_Pasajeros1.TabIndex = 6;
+            this.uC_Pasajeros1.Load += new System.EventHandler(this.uC_Pasajeros1_Load);
             // 
             // uC_VuelosHome1
             // 
@@ -226,15 +228,14 @@
             this.uC_VuelosHome1.Size = new System.Drawing.Size(664, 440);
             this.uC_VuelosHome1.TabIndex = 5;
             // 
-            // uC_Pasajeros1
+            // uC_Reservaciones1
             // 
-            this.uC_Pasajeros1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Pasajeros1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Pasajeros1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.uC_Pasajeros1.Name = "uC_Pasajeros1";
-            this.uC_Pasajeros1.Size = new System.Drawing.Size(664, 440);
-            this.uC_Pasajeros1.TabIndex = 6;
-            this.uC_Pasajeros1.Load += new System.EventHandler(this.uC_Pasajeros1_Load);
+            this.uC_Reservaciones1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Reservaciones1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Reservaciones1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_Reservaciones1.Name = "uC_Reservaciones1";
+            this.uC_Reservaciones1.Size = new System.Drawing.Size(664, 440);
+            this.uC_Reservaciones1.TabIndex = 4;
             // 
             // HomeAdmin
             // 

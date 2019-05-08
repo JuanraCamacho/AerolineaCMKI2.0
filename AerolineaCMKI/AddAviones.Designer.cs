@@ -1,6 +1,6 @@
 ﻿namespace AerolineaCMKI
 {
-    partial class AddPasajeros
+    partial class AddAviones
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblAdd = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblAdd = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,19 +47,6 @@
             this.panel1.Size = new System.Drawing.Size(800, 51);
             this.panel1.TabIndex = 1;
             // 
-            // lblAdd
-            // 
-            this.lblAdd.AutoSize = true;
-            this.lblAdd.BackColor = System.Drawing.Color.Transparent;
-            this.lblAdd.Font = new System.Drawing.Font("Bahnschrift", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdd.ForeColor = System.Drawing.Color.White;
-            this.lblAdd.Location = new System.Drawing.Point(141, 6);
-            this.lblAdd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAdd.Name = "lblAdd";
-            this.lblAdd.Size = new System.Drawing.Size(150, 36);
-            this.lblAdd.TabIndex = 11;
-            this.lblAdd.Text = "Pasajeros";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AerolineaCMKI.Properties.Resources.close;
@@ -72,15 +59,28 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
-            // AddPasajeros
+            // lblAdd
+            // 
+            this.lblAdd.AutoSize = true;
+            this.lblAdd.BackColor = System.Drawing.Color.Transparent;
+            this.lblAdd.Font = new System.Drawing.Font("Bahnschrift", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdd.ForeColor = System.Drawing.Color.White;
+            this.lblAdd.Location = new System.Drawing.Point(141, 6);
+            this.lblAdd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAdd.Name = "lblAdd";
+            this.lblAdd.Size = new System.Drawing.Size(122, 36);
+            this.lblAdd.TabIndex = 11;
+            this.lblAdd.Text = "Aviones";
+            // 
+            // AddAviones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddPasajeros";
-            this.Text = "AddPasajeros";
+            this.Name = "AddAviones";
+            this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AerolineaCMKI
 {
-    public partial class AddPasajeros : Form
+    public partial class AddAviones : Form
     {
-        public AddPasajeros()
+        public AddAviones()
         {
             InitializeComponent();
         }

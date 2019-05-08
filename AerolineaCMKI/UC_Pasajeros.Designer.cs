@@ -28,83 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.pbAdd = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pcDelete = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcDelete)).BeginInit();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dtgvPasajeros = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPasajeros)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // dtgvPasajeros
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(240, 143);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "PASAJEROS";
-            // 
-            // pbAdd
-            // 
-            this.pbAdd.Image = global::AerolineaCMKI.Properties.Resources.add;
-            this.pbAdd.Location = new System.Drawing.Point(453, 21);
-            this.pbAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pbAdd.Name = "pbAdd";
-            this.pbAdd.Size = new System.Drawing.Size(47, 41);
-            this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAdd.TabIndex = 9;
-            this.pbAdd.TabStop = false;
-            this.pbAdd.Click += new System.EventHandler(this.pbAdd_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AerolineaCMKI.Properties.Resources.edit;
-            this.pictureBox1.Location = new System.Drawing.Point(524, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pcDelete
-            // 
-            this.pcDelete.Image = global::AerolineaCMKI.Properties.Resources.delete;
-            this.pcDelete.Location = new System.Drawing.Point(602, 21);
-            this.pcDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pcDelete.Name = "pcDelete";
-            this.pcDelete.Size = new System.Drawing.Size(39, 41);
-            this.pcDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcDelete.TabIndex = 7;
-            this.pcDelete.TabStop = false;
+            this.dtgvPasajeros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgvPasajeros.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtgvPasajeros.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dtgvPasajeros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvPasajeros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvPasajeros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvPasajeros.ColumnHeadersHeight = 30;
+            this.dtgvPasajeros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dtgvPasajeros.EnableHeadersVisualStyles = false;
+            this.dtgvPasajeros.GridColor = System.Drawing.Color.SteelBlue;
+            this.dtgvPasajeros.Location = new System.Drawing.Point(191, 17);
+            this.dtgvPasajeros.Name = "dtgvPasajeros";
+            this.dtgvPasajeros.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvPasajeros.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvPasajeros.RowHeadersVisible = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgvPasajeros.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvPasajeros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvPasajeros.Size = new System.Drawing.Size(278, 231);
+            this.dtgvPasajeros.TabIndex = 37;
+            this.dtgvPasajeros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPasajeros_CellContentClick);
             // 
             // UC_Pasajeros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pbAdd);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pcDelete);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.dtgvPasajeros);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_Pasajeros";
             this.Size = new System.Drawing.Size(664, 440);
-            ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcDelete)).EndInit();
+            this.Load += new System.EventHandler(this.UC_Pasajeros_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPasajeros)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pbAdd;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pcDelete;
+        private System.Windows.Forms.DataGridView dtgvPasajeros;
     }
 }
