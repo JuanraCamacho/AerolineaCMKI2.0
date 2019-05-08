@@ -64,6 +64,11 @@ namespace AerolineaCMKI
         {
 
         }
+
+        private void pnlTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
         //uC_Reservaciones
     }
 }

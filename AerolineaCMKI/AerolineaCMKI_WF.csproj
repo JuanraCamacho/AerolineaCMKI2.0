@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,17 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddPasajeros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddPasajeros.Designer.cs">
-      <DependentUpon>AddPasajeros.cs</DependentUpon>
-    </Compile>
     <Compile Include="addReservacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="addReservacion.Designer.cs">
       <DependentUpon>addReservacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAviones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAviones.Designer.cs">
+      <DependentUpon>AddAviones.cs</DependentUpon>
     </Compile>
     <Compile Include="HomeAdmin.cs">
       <SubType>Form</SubType>
@@ -108,8 +109,8 @@
     <Compile Include="UC_VuelosVuelo.Designer.cs">
       <DependentUpon>UC_VuelosVuelo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddPasajeros.resx">
-      <DependentUpon>AddPasajeros.cs</DependentUpon>
+    <EmbeddedResource Include="AddAviones.resx">
+      <DependentUpon>AddAviones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addReservacion.resx">
       <DependentUpon>addReservacion.cs</DependentUpon>
@@ -164,6 +165,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AerolineaCMKI_Datos\AerolineaCMKI_Datos.csproj">
+      <Project>{a3dca33f-e15d-4bf1-af61-bcf2bb5753dc}</Project>
+      <Name>AerolineaCMKI_Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AerolineaCMKI_Negocio\AerolineaCMKI_Negocio.csproj">
       <Project>{c5773619-bad3-459f-bb43-9132350cb0a9}</Project>
       <Name>AerolineaCMKI_Negocio</Name>

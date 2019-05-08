@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using AerolineaCMKI_Datos;  
 
+
 namespace AerolineaCMKI_Negocio
 {
     public class CN_Reservaciones
@@ -19,9 +20,10 @@ namespace AerolineaCMKI_Negocio
             tabla = objetoCN.Mostrar();
             return tabla;
         }
-        public void InsertarGenerarFicha(String nombre, String apellidos, String fechaReservacion, String tipoReservacion, String tipoEstado, String monto, String MetodoPago, String numeroAsiento, String fila)
+        public void Eliminar(String id)
         {
-            objetoCN.InsertarPrueba(nombre,  apellidos,  fechaReservacion,  tipoReservacion,  tipoEstado, Convert.ToDouble ( monto),  MetodoPago,  numeroAsiento, Convert.ToChar (fila));
+            objetoCN.Eliminar(Convert.ToInt32(id));
         }
+
     }
 }
