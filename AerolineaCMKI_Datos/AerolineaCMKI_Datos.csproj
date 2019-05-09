@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CD_VuelosAvion.cs" />
-    <Compile Include="CD_VuelosVuelo.cs" />
+    <Compile Include="CD_VuelosVuelos.cs" />
+    <Compile Include="CD_VuelosAviones.cs" />
     <Compile Include="CD_Conexion.cs" />
     <Compile Include="CD_Pasajeros.cs" />
     <Compile Include="CD_Reservaciones.cs" />

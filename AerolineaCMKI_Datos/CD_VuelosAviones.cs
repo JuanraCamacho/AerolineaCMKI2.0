@@ -9,7 +9,7 @@ using AerolineaCMKI_Datos;
 
 namespace AerolineaCMKI_Datos
 {
-    public class CD_VuelosVuelo
+    public class CD_VuelosAviones
     {
         CD_Conexion conexion = new CD_Conexion();//iniciamos la instancia de la conexios
 

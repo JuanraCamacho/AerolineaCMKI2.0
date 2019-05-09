@@ -1,6 +1,6 @@
 ﻿namespace AerolineaCMKI
 {
-    partial class UC_VuelosVuelo
+    partial class UC_VuelosAviones
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_VuelosVuelo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_VuelosAviones));
             this.ptbEditar = new System.Windows.Forms.PictureBox();
             this.pcDelete = new System.Windows.Forms.PictureBox();
             this.dtgvVuelosVuelo = new System.Windows.Forms.DataGridView();

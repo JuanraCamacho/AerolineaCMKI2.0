@@ -27,6 +27,7 @@ namespace AerolineaCMKI_Datos
             tabla.Load(leer);//la tabla sera rellenada con lo que lea
             conexion.CerrarConexion();
             return tabla;
+            //gg
         }
 
         public DataTable ListarDestinos()
@@ -39,6 +40,7 @@ namespace AerolineaCMKI_Datos
             tabla.Load(leer);//la tabla sera rellenada con lo que lea
             conexion.CerrarConexion();
             return tabla;
+
         }
         public DataTable ListarAviones()
         {

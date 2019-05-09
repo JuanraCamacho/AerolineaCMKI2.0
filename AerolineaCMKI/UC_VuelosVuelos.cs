@@ -11,14 +11,14 @@ using AerolineaCMKI_Negocio;
 
 namespace AerolineaCMKI
 {
-    public partial class UC_VuelosAvion : UserControl
+    public partial class UC_VuelosVuelos : UserControl
     {
        
-        public UC_VuelosAvion()
+        public UC_VuelosVuelos()
         {
             InitializeComponent();
         }
-        CN_VuelosVuelo2 objetoCN = new CN_VuelosVuelo2();
+        CN_VuelosVuelo objetoCN = new CN_VuelosVuelo();
         private bool Editar = false;
         private string IdDestino= null;
 
@@ -28,7 +28,7 @@ namespace AerolineaCMKI
         }
         private void MostrarDestinos()
         {
-            CN_VuelosVuelo2 objeto = new CN_VuelosVuelo2();
+            CN_VuelosVuelo objeto = new CN_VuelosVuelo();
             dtgvVuelosAvion.DataSource = objeto.MostrarAvionesVuelosN();
         }
 

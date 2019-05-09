@@ -11,9 +11,9 @@ using AerolineaCMKI_Negocio;
 
 namespace AerolineaCMKI
 {
-    public partial class UC_VuelosVuelo : UserControl
+    public partial class UC_VuelosAviones : UserControl
     {
-        public UC_VuelosVuelo()
+        public UC_VuelosAviones()
         {
             InitializeComponent();
         }

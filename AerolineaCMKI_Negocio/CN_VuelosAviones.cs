@@ -9,7 +9,7 @@ using AerolineaCMKI_Datos;
 
 namespace AerolineaCMKI_Negocio
 {
-    public class CN_VuelosVuelo
+    public class CN_VuelosAviones
     {
         private CD_VuelosAviones objetoCN = new CD_VuelosAviones();
 
