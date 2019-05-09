@@ -18,7 +18,7 @@ namespace AerolineaCMKI
         {
             InitializeComponent();
         }
-        CN_VuelosAvion objetoCN = new CN_VuelosAvion();
+        CN_VuelosVuelo2 objetoCN = new CN_VuelosVuelo2();
         private bool Editar = false;
         private string IdDestino= null;
 
@@ -28,7 +28,7 @@ namespace AerolineaCMKI
         }
         private void MostrarDestinos()
         {
-            CN_VuelosAvion objeto = new CN_VuelosAvion();
+            CN_VuelosVuelo2 objeto = new CN_VuelosVuelo2();
             dtgvVuelosAvion.DataSource = objeto.MostrarAvionesVuelosN();
         }
 

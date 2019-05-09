@@ -9,28 +9,28 @@ using AerolineaCMKI_Datos;
 
 namespace AerolineaCMKI_Negocio
 {
-    public class CN_VuelosVuelo
+    public class CN_VuelosAvion
     {
         private CD_VuelosVuelo objetoCN = new CD_VuelosVuelo();
 
         public DataTable MostrarAvionesVuelosN()
         {
             DataTable tabla = new DataTable();
-            tabla = objetoCN.MostrarVueloAvionesD();
+            tabla = objetoCN.MostrarVueloDestinosD();
             return tabla;
         }
-        public void InsertarVuelosVueloN(String fila, String asiento, String descripcion)
+        public void InsertarDestinos(String lugar, String FechaHora, String descripcion)
         {
-            objetoCN.InsertarVuelosVueloD(Convert.ToInt32(fila),Convert.ToChar(asiento),descripcion);
+            objetoCN.InsertarVuelosDestinos(lugar,FechaHora, descripcion);
         }
-        public void EditarVuelosVueloN(String fila, String asiento, String descripcion, String id)
+        public void EditarDestinos(String lugar, String FechaHora, String descripcion, String id)
         {
-            objetoCN.EditarVuelosVueloD(Convert.ToInt32(fila),Convert.ToChar(asiento), descripcion, Convert.ToInt32(id));
+            objetoCN.EditarVuelosDestinosD(lugar, FechaHora,descripcion ,Convert.ToInt32(id));
         }
+
         public void Eliminar(String id)
         {
             objetoCN.Eliminar(Convert.ToInt32(id));
         }
-
     }
 }
