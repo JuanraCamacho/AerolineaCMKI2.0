@@ -19,13 +19,13 @@ namespace AerolineaCMKI_Negocio
             tabla = objetoCN.MostrarVueloDestinosD();
             return tabla;
         }
-        public void InsertarDestinos(String lugar, String FechaHora, String descripcion)
+        public void InsertarDestinos(String fecsalida, String fecllegada, String ruta, int avion)
         {
-            objetoCN.InsertarVuelosDestinos(lugar,FechaHora, descripcion);
+            objetoCN.InsertarVuelosDestinos(fecsalida,fecllegada, ruta, avion);
         }
-        public void EditarDestinos(String lugar, String FechaHora, String descripcion, String id)
+        public void EditarDestinos(String fecsalida, String fecllegada, String ruta, int avion, String id)
         {
-            objetoCN.EditarVuelosDestinosD(lugar, FechaHora,descripcion ,Convert.ToInt32(id));
+            objetoCN.EditarVuelosDestinosD(fecsalida, fecllegada, ruta, avion, Convert.ToInt32(id));
         }
 
         public void Eliminar(String id)

@@ -19,6 +19,7 @@ namespace AerolineaCMKI
         }
 
         CN_VuelosAviones objetoCN = new CN_VuelosAviones();
+        Validaciones Val;
         private bool Editar = false;
         private string IdVuelosVuelo = null;
 
@@ -38,7 +39,7 @@ namespace AerolineaCMKI
             {
                 try
                 {
-                    objetoCN.InsertarVuelosVueloN(txtFila.Text, txtAsiento.Text, txtDescripcion.Text);
+                    objetoCN.InsertarVuelosVueloN(txtModelo.Text, txtCapacidad.Text, cmbxActivo.Text);
                     MessageBox.Show("LOS DATOS SE HAN GUARDADO");
                     MostrarVuelosVuelo();//muestra las generaFicha
                     Limpiar();
@@ -52,7 +53,7 @@ namespace AerolineaCMKI
             {
                 try
                 {
-                    objetoCN.EditarVuelosVueloN(txtFila.Text, txtAsiento.Text, txtDescripcion.Text,IdVuelosVuelo);
+                    objetoCN.EditarVuelosVueloN(txtModelo.Text, txtCapacidad.Text, cmbxActivo.Text,IdVuelosVuelo);
                     MessageBox.Show("LOS DATOS SE HAN ACTUALIZADO CORRECTAMENTE");
                     MostrarVuelosVuelo();//muestra las generaFicha
                     Limpiar();
@@ -67,9 +68,9 @@ namespace AerolineaCMKI
         }
         private void Limpiar()
         {
-            txtFila.Clear();
-            txtAsiento.Clear();
-            txtDescripcion.Clear();
+            txtModelo.Clear();
+            txtCapacidad.Clear();
+            cmbxActivo.Text = "";
 
 
         }
@@ -82,11 +83,11 @@ namespace AerolineaCMKI
                 {
                     Editar = true;
 
-                    txtFila.Text = dtgvVuelosVuelo.CurrentRow.Cells["fila"].Value.ToString();//lo que esta entre corchetes debe estar con el mismo nombre de la base de datos
-                    txtAsiento.Text = dtgvVuelosVuelo.CurrentRow.Cells["Asiento"].Value.ToString();
-                    txtDescripcion.Text = dtgvVuelosVuelo.CurrentRow.Cells["DescripcionAV"].Value.ToString();
+                    txtModelo.Text = dtgvVuelosVuelo.CurrentRow.Cells["Modelo"].Value.ToString();//lo que esta entre corchetes debe estar con el mismo nombre de la base de datos
+                    txtCapacidad.Text = dtgvVuelosVuelo.CurrentRow.Cells["Capacidad"].Value.ToString();
+                   
               
-                    IdVuelosVuelo = dtgvVuelosVuelo.CurrentRow.Cells["IdAviones"].Value.ToString();
+                    IdVuelosVuelo = dtgvVuelosVuelo.CurrentRow.Cells["IdAvion"].Value.ToString();
 
                 }
 
@@ -102,7 +103,7 @@ namespace AerolineaCMKI
         {
             if (dtgvVuelosVuelo.SelectedRows.Count > 0)
             {
-                IdVuelosVuelo = dtgvVuelosVuelo.CurrentRow.Cells["IdAviones"].Value.ToString();
+                IdVuelosVuelo = dtgvVuelosVuelo.CurrentRow.Cells["IdAvion"].Value.ToString();
                 objetoCN.Eliminar(IdVuelosVuelo);
                 MessageBox.Show("Se ha eliminado correctamente");
                 MostrarVuelosVuelo();
@@ -111,6 +112,19 @@ namespace AerolineaCMKI
             else
             {
                 MessageBox.Show("seleccione la fila por favor");
+            }
+        }
+
+        private void txtCapacidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                Val = new Validaciones();
+                Val.SoloNumerico(e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "aereolinia CMKI", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

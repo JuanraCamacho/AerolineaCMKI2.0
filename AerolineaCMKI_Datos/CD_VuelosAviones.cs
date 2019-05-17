@@ -20,7 +20,7 @@ namespace AerolineaCMKI_Datos
         public DataTable MostrarVueloAvionesD()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "MostrarAviones";
+            comando.CommandText = "MostrarAvionesN";
             comando.CommandType = CommandType.StoredProcedure;
             leer = comando.ExecuteReader();//ejecuta 
             tabla.Load(leer);//la tabla sera rellenada con lo que lea
@@ -28,25 +28,25 @@ namespace AerolineaCMKI_Datos
             return tabla;
         }
 
-        public void InsertarVuelosVueloD(int fila, char asiento, String descripcion)
+        public void InsertarVuelosVueloD(String modelo, String capacidad, int activo)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "InsertAviones";
+            comando.CommandText = "InsertarAvionesN";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@fila", fila);
-            comando.Parameters.AddWithValue("@asiento", asiento);
-            comando.Parameters.AddWithValue("@descripcion", descripcion);
+            comando.Parameters.AddWithValue("@modelo", modelo);
+            comando.Parameters.AddWithValue("@capacidad", capacidad);
+            comando.Parameters.AddWithValue("@activo", activo);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
         }
-        public void EditarVuelosVueloD(int fila, char asiento, String descripcion, int id)
+        public void EditarVuelosVueloD(String modelo, String capacidad, int activo, int id)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "EditarVuelosVuelo";
+            comando.CommandText = "EditarAvionesN";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@fila", fila);
-            comando.Parameters.AddWithValue("@asiento", asiento);
-            comando.Parameters.AddWithValue("@descripcion", descripcion);
+            comando.Parameters.AddWithValue("@modelo", modelo);
+            comando.Parameters.AddWithValue("@capacidad", capacidad);
+            comando.Parameters.AddWithValue("@activo", activo);
             comando.Parameters.AddWithValue("@id", id);
 
             comando.ExecuteNonQuery();
@@ -55,7 +55,7 @@ namespace AerolineaCMKI_Datos
         public void Eliminar(int id)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "EliminarAviones";
+            comando.CommandText = "EliminarAvionesN";
             comando.CommandType = CommandType.StoredProcedure;
 
             comando.Parameters.AddWithValue("@id", id);

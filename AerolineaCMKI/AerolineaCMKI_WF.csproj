@@ -109,6 +109,7 @@
     <Compile Include="UC_VuelosAviones.Designer.cs">
       <DependentUpon>UC_VuelosAviones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validaciones.cs" />
     <EmbeddedResource Include="AddAviones.resx">
       <DependentUpon>AddAviones.cs</DependentUpon>
     </EmbeddedResource>

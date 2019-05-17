@@ -21,32 +21,22 @@ namespace AerolineaCMKI_Datos
         public DataTable Mostrar()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "MostrarReservaciones";
+            comando.CommandText = "MostrarReservacionesN";
             comando.CommandType = CommandType.StoredProcedure;
             leer = comando.ExecuteReader();//ejecuta 
             tabla.Load(leer);//la tabla sera rellenada con lo que lea
             conexion.CerrarConexion();
             return tabla;
             //gg
-        }
-
-        public DataTable ListarDestinos()
-        {
-
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "ListarDescripcionDestinos2";
-            comando.CommandType = CommandType.StoredProcedure;
-            leer = comando.ExecuteReader();//ejecuta 
-            tabla.Load(leer);//la tabla sera rellenada con lo que lea
-            conexion.CerrarConexion();
-            return tabla;
 
         }
+
+       
         public DataTable ListarAviones()
         {
 
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "ListarAviones";
+            comando.CommandText = "listaVuelo";
             comando.CommandType = CommandType.StoredProcedure;
             leer = comando.ExecuteReader();//ejecuta 
             tabla.Load(leer);//la tabla sera rellenada con lo que lea
@@ -54,43 +44,30 @@ namespace AerolineaCMKI_Datos
             return tabla;
         }
 
-        public void InsertarPrueba(String nombre, String apellidos, String fechaReservacion, String tipoReservacion, String tipoEstado, double monto, String MetodoPago, String numeroAsiento, char fila)
+       
+        
+
+        public void InsertarReserva(String nombres, String apellidos, int telefono, int idVuelo, String asiento, char fila)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "pruebaInsertarNuevoPasajero";
+            comando.CommandText = "InsertarReservacionesN";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@nombre", nombre);
-            comando.Parameters.AddWithValue("@apellidos", apellidos);
-            comando.Parameters.AddWithValue("@fechaReservacion", fechaReservacion);
-            comando.Parameters.AddWithValue("@tipoReservaciones", tipoReservacion);
-            comando.Parameters.AddWithValue("@tipoEstado", tipoEstado);
-            comando.Parameters.AddWithValue("@monto", monto);
-            comando.Parameters.AddWithValue("@metodoPago", MetodoPago);
-            comando.Parameters.AddWithValue("@numeroAsiento", numeroAsiento);
-            comando.Parameters.AddWithValue("@fila", fila);
-            comando.ExecuteNonQuery();
-            comando.Parameters.Clear();
-
-        }
-
-        public void InsertarReserva(String nombres, String apellidos, int telefono, int idDestinos, int idAviones)
-        {
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "GuardarReservas";
-            comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@Nombres", nombres);
-            comando.Parameters.AddWithValue("@Apelidos", apellidos);
+            comando.Parameters.AddWithValue("@Nombre", nombres);
+            comando.Parameters.AddWithValue("@Apellidos", apellidos);
             comando.Parameters.AddWithValue("@Telefono", telefono);
-            comando.Parameters.AddWithValue("@IdDestinos", idDestinos);
-            comando.Parameters.AddWithValue("@IdAviones", idAviones);
+            comando.Parameters.AddWithValue("@IdVuelo", idVuelo);
+            comando.Parameters.AddWithValue("@Asiento", asiento);
+            comando.Parameters.AddWithValue("@Fila", fila);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
 
         }
+
+   
         public void Eliminar(int id)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "EliminarReservas";
+            comando.CommandText = "EliminarReservacionesN";
             comando.CommandType = CommandType.StoredProcedure;
 
             comando.Parameters.AddWithValue("@id", id);

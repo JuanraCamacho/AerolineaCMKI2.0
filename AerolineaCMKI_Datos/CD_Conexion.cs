@@ -10,7 +10,7 @@ namespace AerolineaCMKI_Datos
 {
     class CD_Conexion
     {
-        private SqlConnection Conexion = new SqlConnection("server=ALEXIS\\ALEXIS;DataBase=aereolinia;Integrated security=true");
+        private SqlConnection Conexion = new SqlConnection("server=ALEXIS\\ALEXIS;DataBase=basenew;Integrated security=true");
 
         // Iniciando conexion con la base de datos  
         public SqlConnection AbrirConexion()

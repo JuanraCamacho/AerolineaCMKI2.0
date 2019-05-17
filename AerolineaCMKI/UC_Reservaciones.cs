@@ -14,7 +14,7 @@ namespace AerolineaCMKI
 {
     public partial class UC_Reservaciones : UserControl
     {
-        bool aver = false;
+        
         private string ID = null;
         CN_Reservaciones objetoCN = new CN_Reservaciones();
 
@@ -27,6 +27,8 @@ namespace AerolineaCMKI
         {
             addReservacion ar = new addReservacion();
             ar.ShowDialog();
+            ar.Dispose();
+            MostrarCatClase();
         }
 
         public void MostrarCatClase()
@@ -38,10 +40,7 @@ namespace AerolineaCMKI
         public void UC_Reservaciones_Load(object sender, EventArgs e)
         {
             MostrarCatClase();
-            if (aver == true)
-            {
-                MostrarCatClase();
-            }
+           
 
         }
 
@@ -55,7 +54,7 @@ namespace AerolineaCMKI
 
             if (dtgvReservaciones.SelectedRows.Count > 0)
             {
-                ID = dtgvReservaciones.CurrentRow.Cells["IdReservaciones"].Value.ToString();
+                ID = dtgvReservaciones.CurrentRow.Cells["IdReservacion"].Value.ToString();
                 objetoCN.Eliminar(ID);
                 MessageBox.Show("Se ha eliminado correctamente");
                 MostrarCatClase();
@@ -67,17 +66,7 @@ namespace AerolineaCMKI
             }
         }
 
-        private void pbEdit_Click(object sender, EventArgs e)
-        {
-
-        }
-        //public void prueba (Boolean aver)
-        //    {
-        //        if(aver==true)
-        //        {
-        //            MostrarCatClase();
-        //        }
-        //    }
+       
 
 
     }

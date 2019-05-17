@@ -223,7 +223,7 @@
             // 
             this.uC_VuelosHome1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_VuelosHome1.Location = new System.Drawing.Point(0, 0);
-            this.uC_VuelosHome1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uC_VuelosHome1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_VuelosHome1.Name = "uC_VuelosHome1";
             this.uC_VuelosHome1.Size = new System.Drawing.Size(664, 440);
             this.uC_VuelosHome1.TabIndex = 5;
@@ -275,7 +275,7 @@
         private System.Windows.Forms.Button btnPasajeros;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlGeneral;
-        private UC_VuelosHome uC_Vuelos1;
+       // private UC_VuelosHome uC_Vuelos1;
         private UC_Reservaciones uC_Reservaciones1;
         private UC_VuelosHome uC_VuelosHome1;
         private UC_Pasajeros uC_Pasajeros1;

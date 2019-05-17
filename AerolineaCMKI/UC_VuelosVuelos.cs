@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 using AerolineaCMKI_Negocio;
+using AerolineaCMKI_Datos;
 
 namespace AerolineaCMKI
 {
@@ -17,14 +19,19 @@ namespace AerolineaCMKI
         public UC_VuelosVuelos()
         {
             InitializeComponent();
+            cmbxAvion.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         CN_VuelosVuelo objetoCN = new CN_VuelosVuelo();
+        CD_VuelosVuelos BD = new CD_VuelosVuelos();
+        Validaciones Val;
         private bool Editar = false;
+
         private string IdDestino= null;
 
         private void UC_VuelosAvion_Load(object sender, EventArgs e)
         {
             MostrarDestinos();
+            ListarAviones();
         }
         private void MostrarDestinos()
         {
@@ -34,9 +41,9 @@ namespace AerolineaCMKI
 
         private void Limpiar()
         {
-            txtLugar.Clear();
-            txtFechaHora.Clear();
-            txtDescripcion.Clear();
+            txtfecsalida.Clear();
+            txtFecllegada.Clear();
+            txtruta.Clear();
 
 
         }
@@ -47,9 +54,9 @@ namespace AerolineaCMKI
             {
                 Editar = true;
 
-                txtLugar.Text = dtgvVuelosAvion.CurrentRow.Cells["Lugar"].Value.ToString();//lo que esta entre corchetes debe estar con el mismo nombre de la base de datos
-                txtFechaHora.Text = dtgvVuelosAvion.CurrentRow.Cells["FechaHora"].Value.ToString();
-                txtDescripcion.Text = dtgvVuelosAvion.CurrentRow.Cells["DescripcionDes"].Value.ToString();
+                txtfecsalida.Text = dtgvVuelosAvion.CurrentRow.Cells["Lugar"].Value.ToString();//lo que esta entre corchetes debe estar con el mismo nombre de la base de datos
+                txtFecllegada.Text = dtgvVuelosAvion.CurrentRow.Cells["FechaHora"].Value.ToString();
+                txtruta.Text = dtgvVuelosAvion.CurrentRow.Cells["DescripcionDes"].Value.ToString();
 
                     IdDestino = dtgvVuelosAvion.CurrentRow.Cells["IdDestinos"].Value.ToString();
 
@@ -67,7 +74,7 @@ namespace AerolineaCMKI
             {
                 try
                 {
-                    objetoCN.InsertarDestinos(txtLugar.Text, txtFechaHora.Text, txtDescripcion.Text);
+                    objetoCN.InsertarDestinos(txtfecsalida.Text, txtFecllegada.Text, txtruta.Text, Convert.ToInt32(cmbxAvion.SelectedValue));
                     MessageBox.Show("LOS DATOS SE HAN GUARDADO");
                     MostrarDestinos();//muestra las generaFicha
                     Limpiar();
@@ -81,7 +88,7 @@ namespace AerolineaCMKI
             {
                 try
                 {
-                    objetoCN.EditarDestinos(txtLugar.Text, txtFechaHora.Text, txtDescripcion.Text, IdDestino);
+                    objetoCN.EditarDestinos(txtfecsalida.Text, txtFecllegada.Text, txtruta.Text, Convert.ToInt32(cmbxAvion.SelectedValue), IdDestino);
                     MessageBox.Show("LOS DATOS SE HAN ACTUALIZADO CORRECTAMENTE");
                     MostrarDestinos();//muestra las generaFicha
                     Limpiar();
@@ -99,7 +106,7 @@ namespace AerolineaCMKI
         {
             if (dtgvVuelosAvion.SelectedRows.Count > 0)
             {
-                IdDestino = dtgvVuelosAvion.CurrentRow.Cells["IdDestinos"].Value.ToString();
+                IdDestino = dtgvVuelosAvion.CurrentRow.Cells["idVuelo"].Value.ToString();
                 objetoCN.Eliminar(IdDestino);
                 MessageBox.Show("Se ha eliminado correctamente");
                 MostrarDestinos();
@@ -110,6 +117,16 @@ namespace AerolineaCMKI
                 MessageBox.Show("seleccione la fila por favor");
             }
         }
+
+        private void ListarAviones()
+        {
+            CD_VuelosVuelos obj = new CD_VuelosVuelos();
+            cmbxAvion.DataSource = obj.ListarAvionesN();
+            cmbxAvion.DisplayMember = "Modelo";
+            cmbxAvion.ValueMember = "IdAvion";
+        }
+
+
     }
-    
+
 }

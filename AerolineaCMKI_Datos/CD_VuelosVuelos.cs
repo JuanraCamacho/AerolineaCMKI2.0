@@ -12,7 +12,7 @@ namespace AerolineaCMKI_Datos
 {
     public class CD_VuelosVuelos
     {
-         CD_Conexion conexion = new CD_Conexion();//iniciamos la instancia de la conexios
+         CD_Conexion conexion = new CD_Conexion();//iniciamos la instancia de la conexios   
 
         SqlDataReader leer;
         DataTable tabla = new DataTable();
@@ -29,25 +29,27 @@ namespace AerolineaCMKI_Datos
             return tabla;
         }
 
-        public void InsertarVuelosDestinos(String lugar, String FechaHora, String descripcion)
+        public void InsertarVuelosDestinos(String fecsalida, String fecllegada, String ruta, int avion)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "InsertarDestinos";
+            comando.CommandText = "InsertarVuelosN";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@Lugar", lugar);
-            comando.Parameters.AddWithValue("@FechaHora", FechaHora);
-            comando.Parameters.AddWithValue("@descripcion", descripcion);
+            comando.Parameters.AddWithValue("@fecsalida", fecsalida);
+            comando.Parameters.AddWithValue("@fecLlegada", fecllegada);
+            comando.Parameters.AddWithValue("@Ruta", ruta);
+            comando.Parameters.AddWithValue("@Avion", avion);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
         }
-        public void EditarVuelosDestinosD(String lugar, String FechaHora, String descripcion, int id)
+        public void EditarVuelosDestinosD(String fecsalida, String fecllegada, String ruta, int avion, int id)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "EditarDestinos";
+            comando.CommandText = "EditarVuelosN";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@lugar", lugar);
-            comando.Parameters.AddWithValue("@FechaHora", FechaHora);
-            comando.Parameters.AddWithValue("@descripcion", descripcion);
+            comando.Parameters.AddWithValue("@fecsalida", fecsalida);
+            comando.Parameters.AddWithValue("@fecLlegada", fecllegada);
+            comando.Parameters.AddWithValue("@Ruta", ruta);
+            comando.Parameters.AddWithValue("@Avion", avion);
 
             comando.Parameters.AddWithValue("@id", id);
 
@@ -58,13 +60,27 @@ namespace AerolineaCMKI_Datos
         public void Eliminar(int id)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "EliminarDestinos";
+            comando.CommandText = "EliminarVuelosN";
             comando.CommandType = CommandType.StoredProcedure;
 
             comando.Parameters.AddWithValue("@id", id);
             comando.ExecuteNonQuery();
 
             comando.Parameters.Clear();
+        }
+
+
+        public DataTable ListarAvionesN()
+        {
+
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "ListadoAviones";
+            comando.CommandType = CommandType.StoredProcedure;
+            leer = comando.ExecuteReader();//ejecuta 
+            tabla.Load(leer);//la tabla sera rellenada con lo que lea
+            conexion.CerrarConexion();
+            return tabla;
+
         }
 
     }
