@@ -1,6 +1,6 @@
 ﻿namespace AerolineaCMKI
 {
-    partial class UC_VuelosAvion
+    partial class UC_VuelosVuelos
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -31,18 +31,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_VuelosAvion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_VuelosVuelos));
             this.label1 = new System.Windows.Forms.Label();
             this.pcbxEditar = new System.Windows.Forms.PictureBox();
             this.pcbxEliminar = new System.Windows.Forms.PictureBox();
-            this.txtLugar = new System.Windows.Forms.TextBox();
-            this.txtFechaHora = new System.Windows.Forms.TextBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtfecsalida = new System.Windows.Forms.TextBox();
+            this.txtFecllegada = new System.Windows.Forms.TextBox();
+            this.txtruta = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblnombre = new System.Windows.Forms.Label();
             this.dtgvVuelosAvion = new System.Windows.Forms.DataGridView();
             this.pcbxGuardar = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbxAvion = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbxEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbxEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvVuelosAvion)).BeginInit();
@@ -83,68 +85,69 @@
             this.pcbxEliminar.TabStop = false;
             this.pcbxEliminar.Click += new System.EventHandler(this.pcbxEliminar_Click);
             // 
-            // txtLugar
+            // txtfecsalida
             // 
-            this.txtLugar.Location = new System.Drawing.Point(513, 116);
-            this.txtLugar.Name = "txtLugar";
-            this.txtLugar.Size = new System.Drawing.Size(137, 20);
-            this.txtLugar.TabIndex = 59;
+            this.txtfecsalida.Location = new System.Drawing.Point(513, 78);
+            this.txtfecsalida.Name = "txtfecsalida";
+            this.txtfecsalida.Size = new System.Drawing.Size(137, 20);
+            this.txtfecsalida.TabIndex = 59;
             // 
-            // txtFechaHora
+            // txtFecllegada
             // 
-            this.txtFechaHora.Location = new System.Drawing.Point(513, 162);
-            this.txtFechaHora.Name = "txtFechaHora";
-            this.txtFechaHora.Size = new System.Drawing.Size(137, 20);
-            this.txtFechaHora.TabIndex = 58;
+            this.txtFecllegada.Location = new System.Drawing.Point(513, 131);
+            this.txtFecllegada.Name = "txtFecllegada";
+            this.txtFecllegada.Size = new System.Drawing.Size(137, 20);
+            this.txtFecllegada.TabIndex = 58;
             // 
-            // txtDescripcion
+            // txtruta
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(513, 200);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(137, 20);
-            this.txtDescripcion.TabIndex = 57;
+            this.txtruta.Location = new System.Drawing.Point(513, 165);
+            this.txtruta.Name = "txtruta";
+            this.txtruta.Size = new System.Drawing.Size(137, 20);
+            this.txtruta.TabIndex = 57;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Control;
+            this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(411, 203);
+            this.label7.Location = new System.Drawing.Point(411, 165);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 17);
+            this.label7.Size = new System.Drawing.Size(38, 17);
             this.label7.TabIndex = 56;
-            this.label7.Text = "DESCRIPCION";
+            this.label7.Text = "RUTA";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(405, 162);
+            this.label2.Location = new System.Drawing.Point(411, 117);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 17);
+            this.label2.Size = new System.Drawing.Size(87, 34);
             this.label2.TabIndex = 55;
-            this.label2.Text = "FECHA Y HORA";
+            this.label2.Text = "FECHA\r\nDE LLEGADA";
             // 
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
-            this.lblnombre.BackColor = System.Drawing.SystemColors.Control;
+            this.lblnombre.BackColor = System.Drawing.Color.White;
             this.lblnombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnombre.ForeColor = System.Drawing.Color.Black;
-            this.lblnombre.Location = new System.Drawing.Point(411, 119);
+            this.lblnombre.Location = new System.Drawing.Point(411, 64);
             this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(50, 17);
+            this.lblnombre.Size = new System.Drawing.Size(72, 34);
             this.lblnombre.TabIndex = 54;
-            this.lblnombre.Text = "LUGAR";
+            this.lblnombre.Text = "FECHA\r\nDE SALIDA";
             // 
             // dtgvVuelosAvion
             // 
+            this.dtgvVuelosAvion.AllowUserToAddRows = false;
             this.dtgvVuelosAvion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgvVuelosAvion.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtgvVuelosAvion.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dtgvVuelosAvion.BackgroundColor = System.Drawing.Color.White;
             this.dtgvVuelosAvion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvVuelosAvion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -161,6 +164,7 @@
             this.dtgvVuelosAvion.GridColor = System.Drawing.Color.SteelBlue;
             this.dtgvVuelosAvion.Location = new System.Drawing.Point(56, 38);
             this.dtgvVuelosAvion.Name = "dtgvVuelosAvion";
+            this.dtgvVuelosAvion.ReadOnly = true;
             this.dtgvVuelosAvion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -192,14 +196,36 @@
             this.pcbxGuardar.TabStop = false;
             this.pcbxGuardar.Click += new System.EventHandler(this.pcbxGuardar_Click);
             // 
-            // UC_VuelosAvion
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(411, 200);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 17);
+            this.label3.TabIndex = 61;
+            this.label3.Text = "AVION";
+            // 
+            // cmbxAvion
+            // 
+            this.cmbxAvion.FormattingEnabled = true;
+            this.cmbxAvion.Location = new System.Drawing.Point(513, 200);
+            this.cmbxAvion.Name = "cmbxAvion";
+            this.cmbxAvion.Size = new System.Drawing.Size(137, 21);
+            this.cmbxAvion.TabIndex = 62;
+            // 
+            // UC_VuelosVuelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cmbxAvion);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pcbxGuardar);
-            this.Controls.Add(this.txtLugar);
-            this.Controls.Add(this.txtFechaHora);
-            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtfecsalida);
+            this.Controls.Add(this.txtFecllegada);
+            this.Controls.Add(this.txtruta);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblnombre);
@@ -208,7 +234,7 @@
             this.Controls.Add(this.pcbxEliminar);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "UC_VuelosAvion";
+            this.Name = "UC_VuelosVuelos";
             this.Size = new System.Drawing.Size(664, 375);
             this.Load += new System.EventHandler(this.UC_VuelosAvion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbxEditar)).EndInit();
@@ -225,13 +251,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pcbxEditar;
         private System.Windows.Forms.PictureBox pcbxEliminar;
-        private System.Windows.Forms.TextBox txtLugar;
-        private System.Windows.Forms.TextBox txtFechaHora;
-        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtfecsalida;
+        private System.Windows.Forms.TextBox txtFecllegada;
+        private System.Windows.Forms.TextBox txtruta;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.DataGridView dtgvVuelosAvion;
         private System.Windows.Forms.PictureBox pcbxGuardar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbxAvion;
     }
 }

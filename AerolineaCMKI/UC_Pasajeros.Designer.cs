@@ -37,9 +37,10 @@
             // 
             // dtgvPasajeros
             // 
+            this.dtgvPasajeros.AllowUserToAddRows = false;
             this.dtgvPasajeros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgvPasajeros.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtgvPasajeros.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dtgvPasajeros.BackgroundColor = System.Drawing.Color.White;
             this.dtgvPasajeros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvPasajeros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -56,6 +57,7 @@
             this.dtgvPasajeros.GridColor = System.Drawing.Color.SteelBlue;
             this.dtgvPasajeros.Location = new System.Drawing.Point(191, 17);
             this.dtgvPasajeros.Name = "dtgvPasajeros";
+            this.dtgvPasajeros.ReadOnly = true;
             this.dtgvPasajeros.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));

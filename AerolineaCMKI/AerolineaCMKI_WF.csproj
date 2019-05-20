@@ -91,11 +91,11 @@
     <Compile Include="UC_Reservaciones.Designer.cs">
       <DependentUpon>UC_Reservaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_VuelosAvion.cs">
+    <Compile Include="UC_VuelosVuelos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_VuelosAvion.Designer.cs">
-      <DependentUpon>UC_VuelosAvion.cs</DependentUpon>
+    <Compile Include="UC_VuelosVuelos.Designer.cs">
+      <DependentUpon>UC_VuelosVuelos.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_VuelosHome.cs">
       <SubType>UserControl</SubType>
@@ -103,12 +103,13 @@
     <Compile Include="UC_VuelosHome.Designer.cs">
       <DependentUpon>UC_VuelosHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_VuelosVuelo.cs">
+    <Compile Include="UC_VuelosAviones.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_VuelosVuelo.Designer.cs">
-      <DependentUpon>UC_VuelosVuelo.cs</DependentUpon>
+    <Compile Include="UC_VuelosAviones.Designer.cs">
+      <DependentUpon>UC_VuelosAviones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validaciones.cs" />
     <EmbeddedResource Include="AddAviones.resx">
       <DependentUpon>AddAviones.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,14 +141,14 @@
     <EmbeddedResource Include="UC_Reservaciones.resx">
       <DependentUpon>UC_Reservaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_VuelosAvion.resx">
-      <DependentUpon>UC_VuelosAvion.cs</DependentUpon>
+    <EmbeddedResource Include="UC_VuelosVuelos.resx">
+      <DependentUpon>UC_VuelosVuelos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_VuelosHome.resx">
       <DependentUpon>UC_VuelosHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_VuelosVuelo.resx">
-      <DependentUpon>UC_VuelosVuelo.cs</DependentUpon>
+    <EmbeddedResource Include="UC_VuelosAviones.resx">
+      <DependentUpon>UC_VuelosAviones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

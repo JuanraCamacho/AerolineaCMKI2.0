@@ -32,8 +32,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pnlHomeVuelos = new System.Windows.Forms.Panel();
-            this.uC_VuelosVuelo1 = new AerolineaCMKI.UC_VuelosVuelo();
-            this.uC_VuelosAvion1 = new AerolineaCMKI.UC_VuelosAvion();
+            this.uC_VuelosVuelo1 = new AerolineaCMKI.UC_VuelosAviones();
+            this.uC_VuelosAvion1 = new AerolineaCMKI.UC_VuelosVuelos();
             this.panel1.SuspendLayout();
             this.pnlHomeVuelos.SuspendLayout();
             this.SuspendLayout();
@@ -130,7 +130,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel pnlHomeVuelos;
-        private UC_VuelosVuelo uC_VuelosVuelo1;
-        private UC_VuelosAvion uC_VuelosAvion1;
+        private UC_VuelosAviones uC_VuelosVuelo1;
+        private UC_VuelosVuelos uC_VuelosAvion1;
     }
 }

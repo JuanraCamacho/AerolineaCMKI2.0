@@ -7,21 +7,20 @@ using System.Data;
 using System.Data.SqlClient;
 using AerolineaCMKI_Datos;
 
-
 namespace AerolineaCMKI_Datos
 {
-    public class CD_VuelosAvion
+    public class CD_VuelosAviones
     {
-         CD_Conexion conexion = new CD_Conexion();//iniciamos la instancia de la conexios
+        CD_Conexion conexion = new CD_Conexion();//iniciamos la instancia de la conexios
 
         SqlDataReader leer;
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
 
-        public DataTable MostrarVueloDestinosD()
+        public DataTable MostrarVueloAvionesD()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "MostrarDestinos";
+            comando.CommandText = "MostrarAvionesN";
             comando.CommandType = CommandType.StoredProcedure;
             leer = comando.ExecuteReader();//ejecuta 
             tabla.Load(leer);//la tabla sera rellenada con lo que lea
@@ -29,36 +28,34 @@ namespace AerolineaCMKI_Datos
             return tabla;
         }
 
-        public void InsertarVuelosDestinos(String lugar, String FechaHora, String descripcion)
+        public void InsertarVuelosVueloD(String modelo, String capacidad, int activo)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "InsertarDestinos";
+            comando.CommandText = "InsertarAvionesN";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@Lugar", lugar);
-            comando.Parameters.AddWithValue("@FechaHora", FechaHora);
-            comando.Parameters.AddWithValue("@descripcion", descripcion);
+            comando.Parameters.AddWithValue("@modelo", modelo);
+            comando.Parameters.AddWithValue("@capacidad", capacidad);
+            comando.Parameters.AddWithValue("@activo", activo);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
         }
-        public void EditarVuelosDestinosD(String lugar, String FechaHora, String descripcion, int id)
+        public void EditarVuelosVueloD(String modelo, String capacidad, int activo, int id)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "EditarDestinos";
+            comando.CommandText = "EditarAvionesN";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@lugar", lugar);
-            comando.Parameters.AddWithValue("@FechaHora", FechaHora);
-            comando.Parameters.AddWithValue("@descripcion", descripcion);
-
+            comando.Parameters.AddWithValue("@modelo", modelo);
+            comando.Parameters.AddWithValue("@capacidad", capacidad);
+            comando.Parameters.AddWithValue("@activo", activo);
             comando.Parameters.AddWithValue("@id", id);
 
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
         }
-
         public void Eliminar(int id)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "EliminarDestinos";
+            comando.CommandText = "EliminarAvionesN";
             comando.CommandType = CommandType.StoredProcedure;
 
             comando.Parameters.AddWithValue("@id", id);
@@ -66,6 +63,6 @@ namespace AerolineaCMKI_Datos
 
             comando.Parameters.Clear();
         }
-
-    }
+    }  
+   
 }

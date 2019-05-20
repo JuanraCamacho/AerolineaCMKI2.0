@@ -43,8 +43,8 @@
   <ItemGroup>
     <Compile Include="CN_Pasajeros.cs" />
     <Compile Include="CN_Reservaciones.cs" />
-    <Compile Include="CN_VuelosAvion.cs" />
     <Compile Include="CN_VuelosVuelo.cs" />
+    <Compile Include="CN_VuelosAviones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
